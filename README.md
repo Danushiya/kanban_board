@@ -127,7 +127,13 @@ npm run dev
 
 ## Screenshots
 
-_Add screenshots of the application here._
+### ☀️ Light Mode
+
+![Kanban Task Board - Light Mode](https://raw.githubusercontent.com/Danushiya/kanban_board/main/src/assets/light_mode.png)
+
+### 🌙 Dark Mode
+
+![Kanban Task Board - Dark Mode](https://raw.githubusercontent.com/Danushiya/kanban_board/main/src/assets/dark_mode.png)
 
 ---
 
@@ -135,11 +141,11 @@ _Add screenshots of the application here._
 
 **Danushiya**
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/Danushiya
 
-LinkedIn: https://www.linkedin.com/in/your-profile/
+LinkedIn: https://www.linkedin.com/in/danushiya
 
-Portfolio: https://your-portfolio-link.com
+Portfolio: https://danushiya.site/
 
 ---
 
