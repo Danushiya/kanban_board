@@ -1,18 +1,148 @@
-# React + Vite
+# Kanban Task Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Kanban Task Board** built with **React** and **Vite**. This application helps users organize tasks across three stages: **To Do**, **In Progress**, and **Done**. Users can add, edit, delete, move tasks between columns, and switch between light and dark themes. All tasks and theme preferences are stored in the browser using **localStorage**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Add new tasks
+- Edit existing tasks
+- Delete tasks
+- Move tasks between columns
+- Light/Dark theme toggle
+- Persistent data using localStorage
+- Responsive design
+- CSS Modules for component-level styling
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS Modules
+- React Context API
+- Custom Hooks
+- localStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── AddCardForm/
+│   ├── Board/
+│   ├── Card/
+│   ├── Column/
+│   └── Header/
+│
+├── context/
+│   └── ThemeContext.jsx
+│
+├── hooks/
+│   ├── useLocalStorage.js
+│   └── useTheme.js
+│
+├── App.jsx
+├── App.module.css
+├── main.jsx
+└── index.css
+```
+
+---
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/kanban-task-board.git
+```
+
+2. Navigate to the project folder
+
+```bash
+cd kanban-task-board
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Start the development server
+
+```bash
+npm run dev
+```
+
+5. Open the URL shown in your terminal (usually `http://localhost:5173`).
+
+---
+
+## How to Use
+
+- Add a new task using the form.
+- Choose the column where the task should appear.
+- Edit or delete tasks as needed.
+- Move tasks between **To Do**, **In Progress**, and **Done**.
+- Toggle between **Light Mode** and **Dark Mode**.
+- Refresh the page to see that tasks and theme are preserved.
+
+---
+
+## React Concepts Used
+
+- Functional Components
+- Props
+- State (`useState`)
+- Context API
+- Custom Hooks
+- Controlled Components
+- Conditional Rendering
+- Event Handling
+- List Rendering (`map`)
+- Immutable State Updates
+- CSS Modules
+
+---
+
+## Future Improvements
+
+- Drag and Drop functionality
+- Due dates for tasks
+- Task priorities
+- Search and filter tasks
+- Category labels
+- Backend integration
+- User authentication
+
+---
+
+## Screenshots
+
+_Add screenshots of the application here._
+
+---
+
+## Author
+
+**Danushiya**
+
+GitHub: https://github.com/your-username
+
+LinkedIn: https://www.linkedin.com/in/your-profile/
+
+Portfolio: https://your-portfolio-link.com
+
+---
+
+## License
+
+This project is created for learning purposes.
