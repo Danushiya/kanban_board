@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.app {
+    width: min(90%, 1200px);
+    margin: 40px auto;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: inherit;
+}
+
+/* ---------- Theme Toggle ---------- */
+
+.theme-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* ---------- Add Task ---------- */
+
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.add-task input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.add-task button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* ---------- Board ---------- */
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.column {
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 400px;
+    transition: 0.3s;
+}
+
+.column h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-card {
+    padding: 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.task-card p {
+    margin-bottom: 15px;
+    word-break: break-word;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.task-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn {
+    background: #dc2626 !important;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b91c1c !important;
+}
+
+/* ---------- Light Theme ---------- */
+
+body.light .header h1,
+body.light .column h2 {
+    color: #2563eb;
+}
+
+body.light .column {
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light .task-card {
+    background: #eef4ff;
+    border-left: 5px solid #2563eb;
+}
+
+body.light input {
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light button {
+    background: #2563eb;
+    color: white;
+}
+
+body.light button:hover {
+    background: #1d4ed8;
+}
+
+body.light .theme-toggle {
+    background: #2563eb;
+    color: white;
+}
+
+/* ---------- Dark Theme ---------- */
+
+body.dark .header h1,
+body.dark .column h2 {
+    color: #60a5fa;
+}
+
+body.dark .column {
+    background: #1f2937;
+}
+
+body.dark .task-card {
+    background: #374151;
+    border-left: 5px solid #60a5fa;
+}
+
+body.dark input {
+    background: #374151;
+    color: white;
+    border: 1px solid #4b5563;
+}
+
+body.dark input::placeholder {
+    color: #d1d5db;
+}
+
+body.dark button {
+    background: #3b82f6;
+    color: white;
+}
+
+body.dark button:hover {
+    background: #2563eb;
+}
+
+body.dark .theme-toggle {
+    background: #f9fafb;
+    color: #111827;
+}
+
+
+.save-btn {
+    background: #16a34a !important;
+    color: white;
+    font-weight: bold;
+    min-width: 40px;
+    transition: 0.2s;
+}
+
+.save-btn:hover {
+    background: #15803d !important;
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: #dc2626 !important;
+    color: white;
+    font-weight: bold;
+    min-width: 40px;
+    transition: 0.2s;
+}
+
+.cancel-btn:hover {
+    background: #b91c1c !important;
+    transform: scale(1.05);
+}
+
+.edit-input {
+    width: 100%;
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+    color: inherit;
+    background: transparent;
+    border: 2px solid #2563eb;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+body.dark .edit-input {
+    border-color: #60a5fa;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+    .board {
+        grid-template-columns: 1fr;
+    }
+
+    .add-task {
+        flex-direction: column;
+    }
+
+    .add-task button {
+        width: 100%;
+    }
+
+    .theme-toggle {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
